@@ -7,5 +7,5 @@ RUN cargo build --release
 
 FROM gcr.io/distroless/cc-debian12
 COPY --from=build-env /app/target/release/msr-hello-grpc /
-EXPOSE 50001
+EXPOSE 50051
 ENTRYPOINT ["/msr-hello-grpc"]
